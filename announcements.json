@@ -1,1 +1,20 @@
-
+[
+  {
+    "id": "8D9710B5-11D0-4F7E-8F54-9F5F5A1B6D88",
+    "title": "Welcome to Mamo",
+    "message": "Thanks for installing the app! Stay tuned for updates.",
+    "date": "2025-12-01T10:00:00Z"
+  },
+  {
+    "id": "6B6C12FD-9A8D-4C3E-8E5F-1B2A9B8C7D6E",
+    "title": "Office Closed",
+    "message": "The office will be closed on Dec 24–26 for the holidays.",
+    "date": "2025-12-05T15:30:00Z"
+  },
+  {
+    "id": "0E4D2A7B-3F1C-4B2A-9C5D-1E2F3A4B5C6D",
+    "title": "New Feature",
+    "message": "You can now submit holiday requests directly from the app.",
+    "date": "2025-12-07T09:15:00Z"
+  }
+]
