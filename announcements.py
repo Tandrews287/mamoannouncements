@@ -12,6 +12,8 @@ from typing import List, Dict, Optional
 class AnnouncementManager:
     """Manages announcements with CRUD operations."""
     
+    VALID_PRIORITIES = ['low', 'normal', 'high']
+    
     def __init__(self, data_file: str = "announcements.json"):
         """
         Initialize the announcement manager.
@@ -21,6 +23,7 @@ class AnnouncementManager:
         """
         self.data_file = data_file
         self.announcements = self._load_announcements()
+        self.next_id = self._get_next_id()
     
     def _load_announcements(self) -> List[Dict]:
         """Load announcements from the data file."""
@@ -34,8 +37,22 @@ class AnnouncementManager:
     
     def _save_announcements(self) -> None:
         """Save announcements to the data file."""
-        with open(self.data_file, 'w') as f:
-            json.dump(self.announcements, f, indent=2)
+        try:
+            with open(self.data_file, 'w') as f:
+                json.dump(self.announcements, f, indent=2)
+        except IOError as e:
+            raise IOError(f"Failed to save announcements: {e}")
+    
+    def _get_next_id(self) -> int:
+        """Get the next available ID for a new announcement."""
+        if not self.announcements:
+            return 1
+        return max(a["id"] for a in self.announcements) + 1
+    
+    def _validate_priority(self, priority: str) -> None:
+        """Validate that the priority is one of the allowed values."""
+        if priority not in self.VALID_PRIORITIES:
+            raise ValueError(f"Invalid priority '{priority}'. Must be one of: {', '.join(self.VALID_PRIORITIES)}")
     
     def create_announcement(self, title: str, content: str, priority: str = "normal") -> Dict:
         """
@@ -48,10 +65,13 @@ class AnnouncementManager:
         
         Returns:
             The created announcement
+        
+        Raises:
+            ValueError: If the priority is not valid
         """
-        announcement_id = len(self.announcements) + 1
+        self._validate_priority(priority)
         announcement = {
-            "id": announcement_id,
+            "id": self.next_id,
             "title": title,
             "content": content,
             "priority": priority,
@@ -59,6 +79,7 @@ class AnnouncementManager:
             "updated_at": datetime.now().isoformat()
         }
         self.announcements.append(announcement)
+        self.next_id += 1
         self._save_announcements()
         return announcement
     
@@ -94,7 +115,13 @@ class AnnouncementManager:
         
         Returns:
             The updated announcement if found, None otherwise
+        
+        Raises:
+            ValueError: If the priority is not valid
         """
+        if priority is not None:
+            self._validate_priority(priority)
+        
         for announcement in self.announcements:
             if announcement["id"] == announcement_id:
                 if title is not None:
