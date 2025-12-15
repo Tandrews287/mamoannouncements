@@ -1,5 +1,12 @@
 [
   {
+    "date" : "2025-12-15T15:48:03Z",
+    "id" : "B487F61F-97F2-4097-8BC4-76980D21F321",
+    "message" : "Your holiday \"Announcement test\" has been approved",
+    "targetEmail" : "tre@mamobuildingservices.com",
+    "title" : "Holiday approved"
+  },
+  {
     "date" : "2025-12-15T15:31:36Z",
     "id" : "783131A9-2766-4A30-802D-AA7376539356",
     "message" : "Your holiday \"ted\" status: Denied",
