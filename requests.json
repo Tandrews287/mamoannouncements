@@ -1,5 +1,15 @@
 [
   {
+    "endDate" : "2025-12-27T11:59:00Z",
+    "id" : "7434E4ED-3A8F-4CB5-9505-5B3585773D7C",
+    "note" : "Boxing Day",
+    "startDate" : "2025-12-26T11:59:00Z",
+    "status" : "Pending",
+    "submittedAt" : "2025-12-15T11:59:59Z",
+    "submittedBy" : "tre@mamobuildingservices.com",
+    "title" : "I want off for boxing day"
+  },
+  {
     "endDate" : "2025-12-26T15:06:00Z",
     "id" : "B5FAF6E7-E217-483C-AC3A-F82A2DCB459F",
     "startDate" : "2025-12-25T15:06:00Z",
