@@ -1,5 +1,12 @@
 [
   {
+    "date" : "2025-12-18T12:17:53Z",
+    "id" : "6F75E79C-65C9-4416-9B58-B843EE883CEB",
+    "message" : "Your holiday \"off work\" has been approved",
+    "targetEmail" : "ryan@mamobuildingservices.com",
+    "title" : "Holiday approved"
+  },
+  {
     "date" : "2025-12-18T12:17:15Z",
     "id" : "84135B2F-80C9-4D69-8634-33379D0275F3",
     "message" : "Your holiday \"Rweettudueirieieiei\" status: Denied",
