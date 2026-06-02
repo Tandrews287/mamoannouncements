@@ -1,5 +1,12 @@
 [
   {
+    "date" : "2026-06-02T15:19:18Z",
+    "id" : "B85F76DE-1B99-4100-97AB-5ACF310DE02E",
+    "message" : "Employee tre has cancelled their holiday \"Hi\" (5 Jan 2026 to 6 Jan 2026, 2 working days, status: Pending). Reason: Don’t need anymore",
+    "targetEmail" : "ryan@mamobuildingservices.com",
+    "title" : "Holiday cancelled"
+  },
+  {
     "date" : "2026-06-02T14:04:23Z",
     "id" : "EA4B2AEC-51EA-407F-AE77-16DFAA49E438",
     "message" : "Your holiday \"Tenerife\" has been approved",
