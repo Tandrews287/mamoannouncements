@@ -1,5 +1,11 @@
 [
   {
+    "date" : "2026-06-03T10:20:12Z",
+    "id" : "E9D45059-A3D4-4D58-A2AF-C565687A2167",
+    "message" : "Nets",
+    "title" : "Test notification"
+  },
+  {
     "date" : "2026-06-02T15:42:45Z",
     "id" : "01B81DD3-9F7B-4F74-9029-67139CC1639F",
     "message" : "Employee tre has cancelled their holiday \"Well\" (5 Jan 2026 to 6 Jan 2026, 2 working days, status: Pending). Reason: Bb",
